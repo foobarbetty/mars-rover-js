@@ -8,5 +8,6 @@ Please develop a program that will calculate the final location of the rover aft
 
 ## To Execute Tests:
 `npm install`
-`npm install jasmine`
+`npm install -g jasmine`
+`jasmine init`
 `jasmine`
