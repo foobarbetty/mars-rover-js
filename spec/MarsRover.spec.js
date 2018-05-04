@@ -9,16 +9,16 @@ describe('Mars Rover', function() {
             expect(mr.direction).toEqual('N');
         });
 
-        it('should reduce Y when moving north', function() {
+        it('should increase Y when moving north', function() {
             var mr = new MarsRover([12, 21], 'N');
             mr.commands(['f', 'f']);
-            expect(mr.location).toEqual([12, 19]);
+            expect(mr.location).toEqual([12, 23]);
         });
 
-        it('should increase Y when moving south', function() {
+        it('should decrease Y when moving south', function() {
             var mr = new MarsRover([12, 21], 'S');
             mr.commands(['f']);
-            expect(mr.location).toEqual([12, 22]);
+            expect(mr.location).toEqual([12, 20]);
         });
 
         it('should reduce X when moving west', function() {
@@ -33,16 +33,16 @@ describe('Mars Rover', function() {
             expect(mr.location).toEqual([13, 21]);
         });
 
-        it('should increase Y when moving backwards facing north', function() {
+        it('should decrease Y when moving backwards facing north', function() {
             var mr = new MarsRover([12, 21], 'N');
             mr.commands(['b']);
-            expect(mr.location).toEqual([12, 22]);
+            expect(mr.location).toEqual([12, 20]);
         });
 
-        it('should reduce Y when moving backwards facing south', function() {
+        it('should increase Y when moving backwards facing south', function() {
             var mr = new MarsRover([12, 21], 'S');
             mr.commands(['b']);
-            expect(mr.location).toEqual([12, 20]);
+            expect(mr.location).toEqual([12, 22]);
         });
 
         it('should increase X when moving backwards facing west', function() {
@@ -51,7 +51,7 @@ describe('Mars Rover', function() {
             expect(mr.location).toEqual([13, 21]);
         });
 
-        it('should reduce X when moving backwards facing east', function() {
+        it('should decrease X when moving backwards facing east', function() {
             var mr = new MarsRover([12, 21], 'E');
             mr.commands(['b']);
             expect(mr.location).toEqual([11, 21]);
