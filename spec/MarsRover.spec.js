@@ -1,3 +1,5 @@
+var MarsRover = require('../lib/MarsRover.js');
+
 describe('Mars Rover', function() {
 
     describe('You have a mars rover machine that must be remote controlled', function() {

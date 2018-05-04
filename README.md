@@ -7,7 +7,9 @@ The robot can turn forward and backward as well as left and right.
 Please develop a program that will calculate the final location of the rover after it has executed a list of commands.
 
 ## To Execute Tests:
-`npm install`
-`npm install -g jasmine`
-`jasmine init`
-`jasmine`
+
+```bash
+sudo npm install -g jasmine
+jasmine init
+jasmine
+```
